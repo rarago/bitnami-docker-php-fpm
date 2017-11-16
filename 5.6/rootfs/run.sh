@@ -2,7 +2,14 @@
 . /opt/bitnami/base/functions
 . /opt/bitnami/base/helpers
 
-echo "extension=redis.so" >> /bitnami/php/conf/php.ini
+grep -q "extension=redis.so" /bitnami/php/conf/php.ini
+if [ "$?" -eq "0" ]
+    then
+    
+    else
+       echo "extension=redis.so" >> /bitnami/php/conf/php.ini
+fi
+
 
 DAEMON=php-fpm
 EXEC=$(which $DAEMON)
