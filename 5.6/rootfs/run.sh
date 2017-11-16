@@ -2,6 +2,8 @@
 . /opt/bitnami/base/functions
 . /opt/bitnami/base/helpers
 
+echo "extension=redis.so" >> /bitnami/php/conf/php.ini
+
 DAEMON=php-fpm
 EXEC=$(which $DAEMON)
 ARGS="-F --pid /opt/bitnami/php/tmp/php5-fpm.pid --fpm-config /opt/bitnami/php/etc/php-fpm.conf --prefix /opt/bitnami/php -c /opt/bitnami/php/etc/php.ini"
