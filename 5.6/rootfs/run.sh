@@ -5,7 +5,7 @@
 grep -q "extension=redis.so" /bitnami/php/conf/php.ini
 if [ "$?" -eq "0" ]
     then
-    
+       echo "already exist"
     else
        echo "extension=redis.so" >> /bitnami/php/conf/php.ini
 fi
