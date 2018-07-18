@@ -47,8 +47,8 @@ RUN apt-get update \
 	&& mv modules/* $EXTENSION_DIR \
 	&& mkdir -p /tmp/php-swoole \
 	&& cd /tmp/php-swoole \
-	&& wget http://pecl.php.net/get/swoole-2.1.0.tgz \
-	&& tar -xzvf swoole-2.1.0.tgz --strip=1 \
+	&& wget http://pecl.php.net/get/swoole-2.0.10.tgz \
+	&& tar -xzvf swoole-2.0.10.tgz --strip=1 \
 	&& phpize \
 	&& ./configure \
 	&& make \
