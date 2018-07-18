@@ -45,8 +45,17 @@ RUN apt-get update \
 	&& ./configure \
 	&& make \
 	&& mv modules/* $EXTENSION_DIR \
+	&& mkdir -p /tmp/php-swoole \
+	&& cd /tmp/php-swoole \
+	&& wget http://pecl.php.net/get/swoole-2.1.0.tgz \
+	&& tar -xzvf swoole-2.1.0.tgz --strip=1 \
+	&& phpize \
+	&& ./configure \
+	&& make \
+	&& mv modules/* $EXTENSION_DIR \
 	&& cd / \
 	&& rm -dR /tmp/php-redis \
+	&& rm -dR /tmp/php-swoole \
 	&& apt-get remove -yqq autoconf wget build-essential \
 	&& apt-get autoremove -y \
 	&& apt-get clean \
