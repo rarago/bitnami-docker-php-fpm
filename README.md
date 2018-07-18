@@ -1,3 +1,5 @@
+我只是往5.6 版本里面增加了 redis 和 swoole扩展，其他啥没干，当然了，用我的这dockerfile ，国内编译会比较快~~
+
 [![CircleCI](https://circleci.com/gh/bitnami/bitnami-docker-php-fpm/tree/master.svg?style=shield)](https://circleci.com/gh/bitnami/bitnami-docker-php-fpm/tree/master)
 [![Slack](https://img.shields.io/badge/slack-join%20chat%20%E2%86%92-e01563.svg)](http://slack.oss.bitnami.com)
 [![Kubectl](https://img.shields.io/badge/kubectl-Available-green.svg)](https://raw.githubusercontent.com/bitnami/bitnami-docker-php-fpm/master/kubernetes.yml)
